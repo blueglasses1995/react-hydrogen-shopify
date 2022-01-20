@@ -3,12 +3,12 @@ import {
   ProductProviderFragment,
   flattenConnection,
 } from '@shopify/hydrogen';
-import ProductList from '../components/ProductList';
+import ProductList from '../../components/ProductList';
 import gql from 'graphql-tag';
 // Import the `LoadMore` component that you created.
-import LoadMore from '../components/LoadMore.client';
+import LoadMore from '../../components/LoadMore.client';
 // Fetch the first three products on the product list page.
-export default function Index({first = 3}) {
+export default function Index({first = 50}) {
   const {data} = useShopQuery({
     query: QUERY,
     variables: {

@@ -11,7 +11,7 @@ export default function LoadMore({children, current}) {
       <div className="py-10 text-center">
         <button
           onClick={() => {
-            setServerState('first', current + 3);
+            setServerState('first', current + 50);
           }}
           className="bg-black text-white py-2 px-4"
         >

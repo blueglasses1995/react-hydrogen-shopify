@@ -9,7 +9,6 @@ import {useParams} from 'react-router-dom';
 import gql from 'graphql-tag';
 
 import LoadMoreProducts from '../../components/LoadMoreProducts.client';
-import Layout from '../../components/Layout.server';
 import ProductCard from '../../components/ProductCard';
 import NotFound from '../../components/NotFound.server';
 
@@ -36,7 +35,7 @@ export default function Collection({
   const hasNextPage = data.collection.products.pageInfo.hasNextPage;
 
   return (
-    <Layout>
+    <>
       <h1 className="font-bold text-4xl md:text-5xl text-gray-900 mb-6 mt-6">
         {collection.title}
       </h1>
@@ -56,7 +55,7 @@ export default function Collection({
       {hasNextPage && (
         <LoadMoreProducts startingCount={collectionProductCount} />
       )}
-    </Layout>
+    </>
   );
 }
 

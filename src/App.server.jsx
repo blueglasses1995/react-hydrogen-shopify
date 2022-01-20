@@ -4,6 +4,7 @@ import {Suspense} from 'react';
 
 import shopifyConfig from '../shopify.config';
 
+import Layout from './components/Layout.server';
 import DefaultSeo from './components/DefaultSeo.server';
 import NotFound from './components/NotFound.server';
 import CartProvider from './components/CartProvider.client';
@@ -17,14 +18,16 @@ export default function App({log, ...serverState}) {
       <ShopifyServerProvider shopifyConfig={shopifyConfig} {...serverState}>
         <CartProvider>
           <DefaultSeo />
-          <Switch>
-            <DefaultRoutes
-              pages={pages}
-              serverState={serverState}
-              log={log}
-              fallback={<NotFound />}
-            />
-          </Switch>
+          <Layout>
+            <Switch>
+              <DefaultRoutes
+                pages={pages}
+                serverState={serverState}
+                log={log}
+                fallback={<NotFound />}
+              />
+            </Switch>
+          </Layout>
         </CartProvider>
       </ShopifyServerProvider>
     </Suspense>
