@@ -9,7 +9,7 @@ import MobileNavigation from './MobileNavigation.client';
 /**
  * A client component that specifies the content of the header on the website
  */
-export default function Header({collections, storeName}) {
+export default function Header({storeName}) {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   return (
@@ -21,9 +21,8 @@ export default function Header({collections, storeName}) {
       >
         <div className="h-full flex lg:flex-col place-content-between">
           <div className="text-center w-full flex justify-between items-center">
-            <CurrencySelector />
+            {/* <CurrencySelector /> */}
             <MobileNavigation
-              collections={collections}
               isOpen={isMobileNavOpen}
               setIsOpen={setIsMobileNavOpen}
             />
@@ -33,13 +32,14 @@ export default function Header({collections, storeName}) {
             >
               {storeName}
             </Link>
+            <Navigation />
             <CartToggle
               handleClick={() => {
                 if (isMobileNavOpen) setIsMobileNavOpen(false);
               }}
             />
           </div>
-          <Navigation collections={collections} storeName={storeName} />
+          {/* <Navigation collections={collections} storeName={storeName} /> */}
         </div>
       </div>
     </header>
