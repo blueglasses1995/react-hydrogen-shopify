@@ -11,7 +11,7 @@ import OpenIcon from './OpenIcon';
 export default function MobileNavigation({isOpen, setIsOpen}) {
   const OpenFocusTrap = isOpen ? FocusTrap : Fragment;
 
-  const menus = ['products', 'collections', 'about', 'contact'];
+  const menus = ['products', 'about', 'contact'];
 
   return (
     <div className="lg:hidden">

@@ -4,7 +4,7 @@ import {Link} from '@shopify/hydrogen/client';
  * A client component that defines the navigation for a web storefront
  */
 export default function Navigation() {
-  const menus = ['products', 'collections', 'about', 'contact'];
+  const menus = ['products', 'about', 'contact'];
 
   return (
     <nav className="hidden lg:block text-center">

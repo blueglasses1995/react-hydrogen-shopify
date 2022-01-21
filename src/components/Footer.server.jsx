@@ -11,11 +11,11 @@ export default function Footer() {
           <div>
             <h2 className="text-md font-medium uppercase mb-4">Shop All</h2>
             <ul className="mt-8 space-y-4">
-              <li className="flex items-center text-sm font-medium text-gray-600 hover:text-gray-900">
-                <Link to="/home">Products</Link>
+            <li className="flex items-center text-sm font-medium text-gray-600 hover:text-gray-900">
+                <Link to="/home">Home</Link>
               </li>
               <li className="flex items-center text-sm font-medium text-gray-600 hover:text-gray-900">
-                <Link to="/home">Collections</Link>
+                <Link to="/home">Products</Link>
               </li>
               {/* <li className="flex items-center text-sm font-medium text-gray-600 hover:text-gray-900">
                 <Link to={`/products/${product?.handle}`}>Product</Link>
