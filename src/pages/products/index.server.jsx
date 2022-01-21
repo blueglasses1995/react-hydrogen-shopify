@@ -27,9 +27,12 @@ export default function Index({first = 50}) {
   const products = flattenConnection(data.products);
   // Return the first three products and the load more button.
   return (
-    <LoadMore current={first}>
-      <ProductList products={products} />
-    </LoadMore>
+    <>
+      <h2 className="text-4xl font-bold uppercase mb-4">Products</h2>
+      <LoadMore current={first}>
+        <ProductList products={products} />
+      </LoadMore>
+    </>
   );
 }
 
